@@ -36,6 +36,11 @@ def sum_array(array)
   array.reduce {|a,b| a + b}
 end
 def add_s(array)
-  array.each_with_index.collect{|element, index| element + "s" }
-  array
+  array.collect do |item|
+    if item != array[1]
+      item << "s"
+    elsif item = array[1]
+      item
+    end
+  end
 end
