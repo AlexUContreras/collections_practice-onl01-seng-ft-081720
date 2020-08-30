@@ -20,20 +20,14 @@ def reverse_array(array)
   array.reverse
 end
 def kesha_maker(array)
-  index = 2
-  new = []
-  array.each do |new, index| 
-    new.gsub(index, "$")
-    new << array
+  array.each do |string|
+    string[2] = "$"
   end
 end
   
   
 def find_a(array)
- array.detect do |a| 
-      array.start_with?("a")
-      return array
-    end
+ 
 end
 
 def sum_array(array)
